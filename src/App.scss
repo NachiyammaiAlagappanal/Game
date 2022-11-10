@@ -5,3 +5,18 @@
 		font-weight: bold;
 	}
 }
+.set-background {
+	position: relative;
+	width: 100vmin;
+	height: 100vmin;
+	background: hotpink;
+}
+
+.square {
+	position: absolute;
+	left: 48vmin;
+	top: 48vmin;
+	width: 5vmin;
+	height: 5vmin;
+	background-color: white;
+}
