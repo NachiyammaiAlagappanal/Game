@@ -2,9 +2,9 @@ import { React } from 'react';
 import './App.scss';
 import BackGround from './component/Background';
 
-const App = () =>
+const App = (context) =>
 	<div className="App" role="App">
-		<BackGround/>
+		<BackGround { ...context }/>
 	</div>;
 
 export default App;
