@@ -1,51 +1,22 @@
-# Project Name
+## Requirements for stateManagement problem
 
-	Project description.
+* Display a board.
+	* The board should have light coloured background.
+	* The board should be a square.
+	* The board should be aligned in a center position.
 
-## Keys
+* Display a object.
+	* The object to be a square.
+	* The object colour should be black.
+	* The Square shaped object to be placed inside the board.
+	* Size of the object to be randomly taken inbetween 5 to 10.
+	* There should be 10 random sized object.
+	* Randomly sized objects are populated with a time gap of 1s.
 
-* A short list of things to understand the package, better.
+## Steps to do
 
-## Notes
-
-* Though pnpm is the preferred package manager, package-lock is still kept to widen support.
-
-## Usage
-### Setup
-#### Linux / Mac
-```sh
-$ git clone https://github.com/Laufire/react-starter.git project-name
-$ cd project-name
-$ sh ./adopt.sh
-$ sh ./setup.sh
-```
-
-#### Windows
-```sh
-C:\> git clone https://github.com/Laufire/react-starter.git project-name
-C:\> cd project-name
-C:\> .\adopt.bat
-```
-
-### Development
-#### Linux, Windows & Mac
-```
-$ # Run all tests.
-$  pnpm run test-dev
-
-$ # Run a particular test (matching the given pattern).
-$ pnpm run test-dev -- --testPathPattern "target"
-
-$ # Run all tests with coverage.
-$  pnpm run test-ci
-```
-
-## ToDo
-
-* Have branches to allow for multiple templates.
-	* One for a clean one to start new projects.
-	* One with basic examples.
-
-* Audit the packages. It's not done, yet. Due to poor understanding of the dependencies.
-
-* Try moving away from create-react-app, as it introduces a lot of constraints, including reconfiguring jest.
+* Display a board.
+	* Background-colour to be set to Lightpink
+	* Set the Width and Height to same value to make a board in square shape
+	* To make the board in a center position take the viewport width and subtract it by (divide the board size)
+	* similarly for height

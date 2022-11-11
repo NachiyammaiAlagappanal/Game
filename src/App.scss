@@ -6,8 +6,11 @@
 	}
 }
 .set-background {
-	position: relative;
-	width: 100vmin;
-	height: 100vmin;
-	background: hotpink;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	width: 75vmin;
+	height: 75vmin;
+	background: lightpink;
 }
