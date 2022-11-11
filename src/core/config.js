@@ -4,7 +4,7 @@ const max = 10;
 
 const config = {
 	size: rndBetween(min, max),
-	boardSize: 75,
+	boardSize: 100,
 	half: 0.5,
 };
 

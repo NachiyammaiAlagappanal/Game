@@ -3,7 +3,9 @@
 * Display a board.
 	* The board should have light coloured background.
 	* The board should be a square.
+	* The size of the board to be maximum occupyable
 	* The board should be aligned in a center position.
+	* The board size should be responsive for changing browser size
 
 * Display a object.
 	* The object to be a square.
@@ -16,13 +18,13 @@
 ## Steps to do
 
 * Display a board.
-	* Background-colour to be set to Lightpink
-	* Set the Width and Height to same value to make a board in square shape
-	* To make the board in a center position take the viewport width and subtract it by (divide the board size)
-	* similarly for height
+	* Background-colour to be set to Lightpink.
+	* Set the width and height to same value to make the board in square shape.
+	* To make the board in a center position take the viewport width and subtract it by (divide the board size).
+	* similarly for height.
 
-* Displat a object
-	* fix the sides of the object randomly ranging between 5 to 10
-	* set the background colour to black
-	* Make the object to be placed within the board by setting top, bottom values based on the calculation
-	* randomly
+* Display an object
+	* fix the size of the object randomly ranging between 5 to 10.
+	* set the background colour to black.
+	* Place the object to be placed within the board by setting top, bottom values based on the calculation.
+	*

@@ -2,15 +2,16 @@ import React from 'react';
 import Square from './Square';
 
 const BackGround = (context) => {
-	const { config: { boardSize, half }} = context;
+	const { config: { boardSize }} = context;
 
 	const style = {
-		position: 'relative',
+		position: 'absolute',
 		width: `${ boardSize }vMin`,
 		height: `${ boardSize }vMin`,
 		background: 'lightPink',
-		top: `calc(50vh - ${ boardSize * half }vMin)`,
-		left: `calc(50vw - ${ boardSize * half }vMin)`,
+		top: '50%',
+		left: '50%',
+		transform: 'translate(-50%, -50%)',
 	};
 
 	return <div style={ style }>
