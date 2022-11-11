@@ -20,3 +20,9 @@
 	* Set the Width and Height to same value to make a board in square shape
 	* To make the board in a center position take the viewport width and subtract it by (divide the board size)
 	* similarly for height
+
+* Displat a object
+	* fix the sides of the object randomly ranging between 5 to 10
+	* set the background colour to black
+	* Make the object to be placed within the board by setting top, bottom values based on the calculation
+	* randomly
