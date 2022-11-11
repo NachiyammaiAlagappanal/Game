@@ -5,13 +5,10 @@ const BackGround = (context) => {
 	const { config: { boardSize }} = context;
 
 	const style = {
-		position: 'absolute',
 		width: `${ boardSize }vMin`,
 		height: `${ boardSize }vMin`,
 		background: 'lightPink',
-		top: '50%',
-		left: '50%',
-		transform: 'translate(-50%, -50%)',
+		margin: 'auto',
 	};
 
 	return <div style={ style }>

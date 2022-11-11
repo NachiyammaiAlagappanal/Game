@@ -20,6 +20,7 @@ const Square = (context) => {
 				width: `${ size }vMin`,
 				height: `${ size }vMin`,
 				backgroundColor: 'black',
+				transform: 'translate(-50%, -50%)',
 			} }
 		/>);
 };

@@ -11,20 +11,24 @@
 	* The object to be a square.
 	* The object colour should be black.
 	* The Square shaped object to be placed inside the board.
-	* Size of the object to be randomly taken inbetween 5 to 10.
-	* There should be 10 random sized object.
+	* The object size to be randomly taken inbetween 5 to 10.
 	* Randomly sized objects are populated with a time gap of 1s.
+	* There should be 10 random sized object.
 
 ## Steps to do
 
 * Display a board.
-	* Background-colour to be set to Lightpink.
+	* Set the background colour to Lightpink.
 	* Set the width and height to same value to make the board in square shape.
-	* To make the board in a center position take the viewport width and subtract it by (divide the board size).
-	* similarly for height.
+	* Take the minimum side of screen size's to make the square board to occupy maximum area.
+	* Position the board in center by using translate css property.
 
 * Display an object
-	* fix the size of the object randomly ranging between 5 to 10.
-	* set the background colour to black.
-	* Place the object to be placed within the board by setting top, bottom values based on the calculation.
-	*
+	* Set the width and heigth to same value to get a square object.
+	* Fix the size of the object randomly ranging between 5 to 10.
+	* Set the background colour to black.
+  * Position the object in center by using absolute and translate css property.
+ 	* Set the top and left value for object based on the object size and board size to place object inside board.
+	* Set the top and left value in a random manner.
+	* Create n number of square object with a regular interval of 1 sec using setInterval and animation-duration.
+	* Populate 10 sqaures by calling clearInterval 
