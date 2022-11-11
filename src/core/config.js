@@ -1,8 +1,11 @@
-/* eslint-disable no-magic-numbers */
 import { rndBetween } from '@laufire/utils/lib';
+const min = 5;
+const max = 10;
 
 const config = {
-	size: `${ rndBetween(5, 10) }vMin`,
+	size: rndBetween(min, max),
+	boardSize: 75,
+	two: 2,
 };
 
 export default config;

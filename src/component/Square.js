@@ -1,19 +1,19 @@
 import React from 'react';
 
-const center = 48;
-
 const Square = (context) => {
-	const { config: { size }} = context;
+	const { config: { size, boardSize, two }} = context;
+
+	const margin = (boardSize / two) - (size / two);
 
 	return (
 		<div
 			style={ {
 				position: 'absolute',
-				left: `${ center }vMin`,
-				top: `${ center }vMin`,
-				width: size,
-				height: size,
-				backgroundColor: 'white',
+				left: `${ margin }vMin`,
+				top: `${ margin }vMin`,
+				width: `${ size }vMin`,
+				height: `${ size }vMin`,
+				backgroundColor: 'black',
 			} }
 		/>);
 };
