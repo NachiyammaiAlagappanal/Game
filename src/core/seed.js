@@ -1,3 +1,5 @@
-const seed = {};
+const seed = {
+	square: [],
+};
 
 export default seed;

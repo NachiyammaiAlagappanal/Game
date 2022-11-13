@@ -1,22 +1,14 @@
-import { rndBetween } from '@laufire/utils/random';
 import React from 'react';
 
-const getRandomMargin = ({ config: { boardSize, size, half }}) => {
-	const limit = size / half;
-	const margin = (boardSize - size) + half;
-
-	return rndBetween(limit, margin);
-};
-
 const Square = (context) => {
-	const { config: { size }} = context;
+	const { state: { square: { size, x, y }}} = context;
 
 	return (
 		<div
 			style={ {
 				position: 'absolute',
-				left: `${ getRandomMargin(context) }vMin`,
-				top: `${ getRandomMargin(context) }vMin`,
+				left: `${ x }vMin`,
+				top: `${ y }vMin`,
 				width: `${ size }vMin`,
 				height: `${ size }vMin`,
 				backgroundColor: 'black',
