@@ -6,7 +6,7 @@ const Board = (context) => {
 
 	const style = {
 		width: `${ boardSize }vmin`,
-		height: `${ boardSize }vMin`,
+		height: `${ boardSize }vmin`,
 		background: 'lightPink',
 		top: '50%',
 		left: '50%',

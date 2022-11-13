@@ -7,10 +7,10 @@ const Square = (context) => {
 		<div
 			className="center"
 			style={ {
-				left: `${ x }vMin`,
-				top: `${ y }vMin`,
-				width: `${ size }vMin`,
-				height: `${ size }vMin`,
+				left: `${ x }vmin`,
+				top: `${ y }vmin`,
+				width: `${ size }vmin`,
+				height: `${ size }vmin`,
 				backgroundColor: 'black',
 			} }
 		/>);
