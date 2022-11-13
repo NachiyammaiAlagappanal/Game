@@ -5,14 +5,13 @@ const Square = (context) => {
 
 	return (
 		<div
+			className="center"
 			style={ {
-				position: 'absolute',
 				left: `${ x }vMin`,
 				top: `${ y }vMin`,
 				width: `${ size }vMin`,
 				height: `${ size }vMin`,
 				backgroundColor: 'black',
-				transform: 'translate(-50%, -50%)',
 			} }
 		/>);
 };

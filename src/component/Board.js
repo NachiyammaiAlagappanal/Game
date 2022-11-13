@@ -1,21 +1,19 @@
 import React from 'react';
 import Square from './Square';
 
-const BackGround = (context) => {
+const Board = (context) => {
 	const { config: { boardSize }} = context;
 
 	const style = {
-		position: 'absolute',
-		width: `${ boardSize }vMin`,
+		width: `${ boardSize }vmin`,
 		height: `${ boardSize }vMin`,
 		background: 'lightPink',
 		top: '50%',
 		left: '50%',
-		transform: 'translate(-50%, -50%)',
 	};
 
-	return <div style={ style }>
+	return <div 	className="center" style={ style }>
 		<Square { ...context }/></div>;
 };
 
-export default BackGround;
+export default Board;

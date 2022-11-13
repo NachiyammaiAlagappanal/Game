@@ -1,11 +1,11 @@
 import SquareManager from '../service/SquareManager';
 
-const square = (context) => ({
+const replaceSquare = (context) => ({
 	square: SquareManager.square(context),
 });
 
 const actions = {
-	square,
+	replaceSquare,
 };
 
 export default actions;
