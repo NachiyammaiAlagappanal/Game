@@ -2,7 +2,9 @@ import { rndBetween } from '@laufire/utils/random';
 
 const SquareManager = {
 
-	getRandomMargin: ({ config: { boardSize, size, half }}) => {
+	getRandomMargin: (
+		boardSize, size, half
+	) => {
 		const limit = size / half;
 		const margin = (boardSize - size) + half;
 
@@ -10,12 +12,17 @@ const SquareManager = {
 	},
 
 	square: (context) => {
-		const { config: { size }} = context;
+		const { config: { min, max, boardSize, half }} = context;
+		const size = rndBetween(min, max);
 
 		return {
 			size: size,
-			x: SquareManager.getRandomMargin(context),
-			y: SquareManager.getRandomMargin(context),
+			x: SquareManager.getRandomMargin(
+				boardSize, size, half
+			),
+			y: SquareManager.getRandomMargin(
+				boardSize, size, half
+			),
 		};
 	},
 

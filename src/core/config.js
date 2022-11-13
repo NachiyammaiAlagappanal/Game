@@ -1,9 +1,6 @@
-import { rndBetween } from '@laufire/utils/lib';
-const min = 5;
-const max = 10;
-
 const config = {
-	size: rndBetween(min, max),
+	min: 5,
+	max: 10,
 	boardSize: 100,
 	half: 0.5,
 	TickerDelay: 1000,
