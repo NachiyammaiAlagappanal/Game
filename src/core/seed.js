@@ -1,5 +1,5 @@
 const seed = {
-	squares: [],
+	shapes: [],
 };
 
 export default seed;

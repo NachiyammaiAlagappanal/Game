@@ -3,9 +3,9 @@
 * Display a board.
 	* The board should have light coloured background.
 	* The board should be a square.
-	* The size of the board to be maximum occupyable
+	* The size of the board to be maximum occupyable.
 	* The board should be aligned in a center position.
-	* The board size should be responsive for changing browser size
+	* The board size should be responsive while changing browser size
 
 * Display a square object.
 	* The object to be a square.

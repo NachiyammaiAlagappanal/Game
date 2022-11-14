@@ -1,4 +1,6 @@
-import { rndBetween } from '@laufire/utils/random';
+import { rndBetween, rndValue } from '@laufire/utils/random';
+
+const Fields = ['Square', 'Circle'];
 
 const SquareManager = {
 
@@ -13,12 +15,12 @@ const SquareManager = {
 
 	square: (context) => {
 		const { config: { min, max, boardSize, half },
-			state: { squares }} = context;
+			state: { shapes }} = context;
 		const size = rndBetween(min, max);
 		const maxSquare = 10;
 
-		return [...squares,
-			...maxSquare > squares.length
+		return [...shapes,
+			...maxSquare > shapes.length
 				? [{
 					size: size,
 					x: SquareManager.getRandomMargin(
@@ -27,6 +29,7 @@ const SquareManager = {
 					y: SquareManager.getRandomMargin(
 						boardSize, size, half
 					),
+					type: rndValue(Fields),
 				}]
 				: []];
 	},
