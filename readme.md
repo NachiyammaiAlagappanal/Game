@@ -7,13 +7,23 @@
 	* The board should be aligned in a center position.
 	* The board size should be responsive for changing browser size
 
-* Display a object.
+* Display a square object.
 	* The object to be a square.
 	* The object colour should be black.
 	* The Square shaped object to be placed inside the board.
 	* The object size to be randomly taken inbetween 5 to 10.
 	* Randomly sized objects are populated with a time gap of 1s.
 	* There should be 10 random sized object.
+
+* Display a circle object.
+	* The object to be a square.
+	* The object colour should be black.
+	* The Square shaped object to be placed inside the board.
+	* The object size to be randomly taken inbetween 5 to 10.
+	* Randomly sized objects are populated with a time gap of 1s.
+	* There should be 10 random sized object.
+
+
 
 ## Steps to do
 

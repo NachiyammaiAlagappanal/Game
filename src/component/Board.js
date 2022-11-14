@@ -1,5 +1,6 @@
 import React from 'react';
-import Square from './Square';
+import Circle from './Circle';
+// import Square from './Square';
 
 const Board = (context) => {
 	const { config: { boardSize }} = context;
@@ -12,8 +13,8 @@ const Board = (context) => {
 		left: '50%',
 	};
 
-	return <div 	className="center" style={ style }>
-		<Square { ...context }/></div>;
+	return <div className="center" style={ style }>
+		<Circle { ...context }/></div>;
 };
 
 export default Board;
