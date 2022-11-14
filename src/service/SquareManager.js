@@ -1,6 +1,6 @@
 import { rndBetween, rndValue } from '@laufire/utils/random';
 
-const Fields = ['Square', 'Circle'];
+const Fields = ['Square', 'Circle', 'Triangle'];
 
 const SquareManager = {
 

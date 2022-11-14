@@ -1,10 +1,12 @@
 import React from 'react';
 import Circle from './Circle';
 import Square from './Square';
+import Triangle from './Triangle';
 
 const component = {
 	Circle,
 	Square,
+	Triangle,
 };
 
 const Board = (context) => {
