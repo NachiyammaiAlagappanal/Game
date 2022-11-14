@@ -1,16 +1,8 @@
 import React from 'react';
-import Circle from './Circle';
-import Square from './Square';
-import Triangle from './Triangle';
-
-const component = {
-	Circle,
-	Square,
-	Triangle,
-};
+import Shapes from './Shape';
 
 const Board = (context) => {
-	const { config: { boardSize }, state: { shapes }} = context;
+	const { config: { boardSize }} = context;
 
 	const style = {
 		width: `${ boardSize }vmin`,
@@ -21,11 +13,7 @@ const Board = (context) => {
 	};
 
 	return <div className="center" style={ style }>
-		{shapes.map(({ type, ...data }, index) => {
-			const Shape =	component[type];
-
-			return <Shape key={ index }{ ...{ ...context, data } }/>;
-		})}</div>;
+		<Shapes { ...context }/></div>;
 };
 
 export default Board;

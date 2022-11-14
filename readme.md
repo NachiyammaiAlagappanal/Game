@@ -42,3 +42,7 @@
 	* Set the top and left value in a random manner.
 	* Create n number of square object with a regular interval of 1 sec using setInterval.
 	* Populate only 10 sqaures by comparing the length of the array and then return the square's properties.
+
+* Display an object of shape Triangle.
+	* Take border-bottom, border-right, border-left property to get the triangle.
+	* Triangle should be equilateral triangle by dividing border bottom value by 2 for keeping in border-right and left property.
