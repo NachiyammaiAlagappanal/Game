@@ -30,5 +30,5 @@
   * Position the object in center by using absolute and translate css property.
  	* Set the top and left value for object based on the object size and board size to place object inside board.
 	* Set the top and left value in a random manner.
-	* Create n number of square object with a regular interval of 1 sec using setInterval and animation-duration.
-	* Populate 10 sqaures by calling clearInterval 
+	* Create n number of square object with a regular interval of 1 sec using setInterval.
+	* Populate only 10 sqaures by comparing the length of the array and then return the square's properties.

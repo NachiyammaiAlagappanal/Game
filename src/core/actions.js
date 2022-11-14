@@ -1,7 +1,7 @@
 import SquareManager from '../service/SquareManager';
 
 const replaceSquare = (context) => ({
-	square: SquareManager.square(context),
+	squares: SquareManager.square(context),
 });
 
 const actions = {

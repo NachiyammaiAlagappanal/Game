@@ -1,19 +1,21 @@
 import React from 'react';
 
 const Square = (context) => {
-	const { state: { square: { size, x, y }}} = context;
+	const { state: { squares }} = context;
 
 	return (
-		<div
-			className="center"
-			style={ {
-				left: `${ x }vmin`,
-				top: `${ y }vmin`,
-				width: `${ size }vmin`,
-				height: `${ size }vmin`,
-				backgroundColor: 'black',
-			} }
-		/>);
+		squares.map(({ size, x, y }, index) =>
+			<div
+				key={ index }
+				className="center"
+				style={ {
+					left: `${ x }vmin`,
+					top: `${ y }vmin`,
+					width: `${ size }vmin`,
+					height: `${ size }vmin`,
+					backgroundColor: 'black',
+				} }
+			/>));
 };
 
 export default Square;

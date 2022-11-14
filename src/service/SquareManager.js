@@ -12,20 +12,24 @@ const SquareManager = {
 	},
 
 	square: (context) => {
-		const { config: { min, max, boardSize, half }} = context;
+		const { config: { min, max, boardSize, half },
+			state: { squares }} = context;
 		const size = rndBetween(min, max);
+		const maxSquare = 10;
 
-		return {
-			size: size,
-			x: SquareManager.getRandomMargin(
-				boardSize, size, half
-			),
-			y: SquareManager.getRandomMargin(
-				boardSize, size, half
-			),
-		};
+		return [...squares,
+			...maxSquare > squares.length
+				? [{
+					size: size,
+					x: SquareManager.getRandomMargin(
+						boardSize, size, half
+					),
+					y: SquareManager.getRandomMargin(
+						boardSize, size, half
+					),
+				}]
+				: []];
 	},
-
 };
 
 export default SquareManager;
