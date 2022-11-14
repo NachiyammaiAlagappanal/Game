@@ -5,8 +5,8 @@ const SquareManager = {
 	getRandomMargin: (
 		boardSize, size, half
 	) => {
-		const limit = size / half;
-		const margin = (boardSize - size) + half;
+		const limit = size * half;
+		const margin = boardSize - (size * half);
 
 		return rndBetween(limit, margin);
 	},
