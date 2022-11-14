@@ -7,12 +7,10 @@ const Triangle = (context) => {
 		<div
 			className="center"
 			style={ {
-				width: `${ 0 }vmin`,
-				height: `${ 0 }vmin`,
-				left: `${ x - (size * half) }vmin`,
+				left: `${ x }vmin`,
 				top: `${ y }vmin`,
-				borderLeft: `${ size }vmin solid transparent`,
-				borderRight: `${ size }vmin solid transparent`,
+				borderLeft: `${ size * half }vmin solid transparent`,
+				borderRight: `${ size * half }vmin solid transparent`,
 				borderBottom: `${ size }vmin solid black`,
 			} }
 		/>);
