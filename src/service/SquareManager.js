@@ -1,6 +1,7 @@
 import { rndBetween, rndValue } from '@laufire/utils/random';
 
 const Fields = ['Square', 'Circle', 'Triangle'];
+const Directions = ['left', 'right', 'top', 'bottom'];
 
 const SquareManager = {
 
@@ -30,6 +31,7 @@ const SquareManager = {
 						boardSize, size, half
 					),
 					type: rndValue(Fields),
+					direction: rndValue(Directions),
 				}]
 				: []];
 	},

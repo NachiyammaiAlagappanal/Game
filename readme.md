@@ -53,5 +53,7 @@
 
 * Movement of an object inside a board.
 		* set the movement distance for an object
-		* Based on the direction given the object x and y value have to be increased and decreased.
+		* Based on the direction given the object x and y value 		have to be increased and decreased.
+		* use setInterval with a time delay to make the object to move.
+* Movement of shape in random directions.
 

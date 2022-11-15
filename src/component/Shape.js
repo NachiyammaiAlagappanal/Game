@@ -12,10 +12,10 @@ const component = {
 const Shapes = (context) => {
 	const { state: { shapes }} = context;
 
-	return shapes.map(({ type, distance, ...data }, index) => {
+	return shapes.map(({ type, ...data }, index) => {
 		const Shape = component[type];
 
-		return <Shape key={ index } { ...{ ...context, distance, data } }/>;
+		return <Shape key={ index } { ...{ ...context, data } }/>;
 	});
 };
 
