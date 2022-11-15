@@ -2,7 +2,7 @@ const Ticker = {
 	start: (context) => {
 		const { config, actions } = context;
 
-		return setInterval(() => actions.replaceSquare(context),
+		return setInterval(() => actions.addShapes(context),
 			config.TickerDelay);
 	},
 };

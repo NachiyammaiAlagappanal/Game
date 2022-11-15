@@ -13,7 +13,7 @@ const SquareManager = {
 		return rndBetween(limit, margin);
 	},
 
-	square: (context) => {
+	addShape: (context) => {
 		const { config: { min, max, boardSize, half },
 			state: { shapes }} = context;
 		const size = rndBetween(min, max);
@@ -33,6 +33,7 @@ const SquareManager = {
 				}]
 				: []];
 	},
+
 };
 
 export default SquareManager;

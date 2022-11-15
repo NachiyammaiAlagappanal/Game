@@ -22,6 +22,10 @@
 	* The object size to be randomly taken inbetween 5 to 10.
 	* Randomly sized objects are populated with a time gap of 1s.
 	* There should be 10 random sized object.
+	* Circle and Triangle should not be visible under a same size of square.
+
+* Movement of objects
+		* Based on the direction given the object have to move with the given distance
 
 
 
@@ -46,3 +50,8 @@
 * Display an object of shape Triangle.
 	* Take border-bottom, border-right, border-left property to get the triangle.
 	* Triangle should be equilateral triangle by dividing border bottom value by 2 for keeping in border-right and left property.
+
+* Movement of an object inside a board.
+		* set the movement distance for an object
+		* Based on the direction given the object x and y value have to be increased and decreased.
+
