@@ -1,8 +1,8 @@
 import MovementManager from '../service/MovementManager';
-import SquareManager from '../service/SquareManager';
+import ShapeManager from '../service/ShapeManager';
 
 const addShapes = (context) => ({
-	shapes: SquareManager.addShape(context),
+	shapes: ShapeManager.addShape(context),
 });
 const manageMovement = (context) => ({
 	shapes: MovementManager.movingShapes(context),

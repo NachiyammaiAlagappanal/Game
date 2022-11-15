@@ -56,4 +56,6 @@
 		* Based on the direction given the object x and y value 		have to be increased and decreased.
 		* use setInterval with a time delay to make the object to move.
 * Movement of shape in random directions.
+	  * Randomly select shapes from 4 available shapes.
+		* Based on the direction, change the x and y value by calculating with distance and direction.
 
