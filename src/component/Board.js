@@ -10,6 +10,7 @@ const Board = (context) => {
 		background: 'lightPink',
 		top: '50%',
 		left: '50%',
+		overflow: 'hidden',
 	};
 
 	return <div className="center" style={ style }>
