@@ -1,5 +1,6 @@
 import React from 'react';
-import Shapes from './Shape';
+// import Shapes from './Shape';
+import Square from './Square';
 
 const Board = (context) => {
 	const { config: { boardSize }} = context;
@@ -14,7 +15,7 @@ const Board = (context) => {
 	};
 
 	return <div className="center" style={ style }>
-		<Shapes { ...context }/></div>;
+		<Square { ...context }/></div>;
 };
 
 export default Board;

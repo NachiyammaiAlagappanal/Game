@@ -6,7 +6,6 @@ import Ticker from './service/Ticker';
 
 const App = (context) => {
 	useEffect(() => Ticker.start(context), []);
-	console.log(context);
 
 	return <div className="App" role="App">
 		<Board { ...context }/>
