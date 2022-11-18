@@ -18,7 +18,7 @@ const getXValue = (
 	const direction = directions[shape.direction];
 
 	return limit >= shape.x || shape.x >= margin
-		? shape.x % 100
+		? (shape.x % 100) + (direction.x * distance)
 		: shape.x + (direction.x * distance);
 };
 
