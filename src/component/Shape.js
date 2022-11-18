@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React from 'react';
 import Circle from './Circle';
 import Square from './Square';
@@ -15,6 +16,7 @@ const Shapes = (context) => {
 	return shapes.map(({ type, ...data }, index) => {
 		const Shape = component[type];
 
+		console.log(context);
 		return <Shape key={ index } { ...{ ...context, data } }/>;
 	});
 };

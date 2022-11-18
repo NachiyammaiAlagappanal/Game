@@ -3,7 +3,7 @@ const config = {
 	max: 10,
 	boardSize: 100,
 	half: 0.5,
-	TickerDelay: 100,
+	TickerDelay: 1000,
 	distance: 1,
 };
 
