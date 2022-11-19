@@ -1,4 +1,3 @@
-/* eslint-disable no-magic-numbers */
 const directions = {
 	left: { x: -1, y: 0 },
 	right: { x: 1, y: 0 },
@@ -11,7 +10,7 @@ const getValue = (shape, { boardSize, half }) => {
 	const margin = boardSize - limit;
 
 	return limit >= shape || shape >= margin
-		? shape % 100
+		? shape % boardSize
 		: shape;
 };
 

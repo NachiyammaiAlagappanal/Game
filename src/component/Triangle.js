@@ -1,5 +1,3 @@
-/* eslint-disable max-lines-per-function */
-/* eslint-disable no-magic-numbers */
 import React from 'react';
 import WrapObject from './WrapObject';
 
