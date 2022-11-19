@@ -3,19 +3,22 @@ import WrapObject from './WrapObject';
 
 const Square = (context) => {
 	const { data: { size, x, y }} = context;
+	const style = {
+		width: `${ size }vmin`,
+		height: `${ size }vmin`,
+		backgroundColor: 'black',
+	};
 
 	return <div>
 		<div
 			className="center"
 			style={ {
-				width: `${ size }vmin`,
-				height: `${ size }vmin`,
-				backgroundColor: 'black',
+				...style,
 				left: `${ x }vmin`,
 				top: `${ y }vmin`,
 			} }
 		/>
-		<WrapObject { ...{ ...context, className: '' } }/></div>;
+		<WrapObject { ...{ ...context, shapeStyle: style } }/></div>;
 };
 
 export default Square;

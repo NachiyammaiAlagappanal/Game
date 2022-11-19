@@ -8,18 +8,16 @@ const directions = {
 };
 
 const WrapObject = (context) => {
-	const { data: { size, x, y, direction },
-		config: { boardSize }, className } = context;
+	const { data: { x, y, direction },
+		config: { boardSize }, shapeStyle: style } = context;
 
 	return (
 		<div
-			className={ `center ${ className }` }
+			className="center"
 			style={ {
+				...style,
 				left: `${ x + (directions[direction].x * boardSize) }vmin`,
 				top: `${ y + (directions[direction].y * boardSize) }vmin`,
-				width: `${ size }vmin`,
-				height: `${ size }vmin`,
-				backgroundColor: 'black',
 			} }
 		/>);
 };
