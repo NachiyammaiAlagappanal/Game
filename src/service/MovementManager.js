@@ -6,42 +6,25 @@ const directions = {
 	bottom: { x: 0, y: -1 },
 };
 
-const getXValue = (
-	shape, boardSize, half, distance
-) => {
+const getValue = (shape, { boardSize, half }) => {
 	const limit = shape.size * half;
 	const margin = boardSize - limit;
-	const direction = directions[shape.direction];
 
-	return limit >= shape.x || shape.x >= margin
-		? (shape.x % 100) + (direction.x * distance)
-		: shape.x + (direction.x * distance);
-};
-
-const getYValue = (
-	shape, boardSize, half, distance
-) => {
-	const limit = shape.size * half;
-	const margin = boardSize - limit;
-	const direction = directions[shape.direction];
-
-	return limit >= shape.y || shape.y >= margin
-		? (shape.y % 100) + (direction.y * distance)
-		: shape.y + (direction.y * distance);
+	return limit >= shape || shape >= margin
+		? shape % 100
+		: shape;
 };
 
 const MovementManager = {
 	movingShapes: ({ state: { shapes },
-		config: { distance, boardSize, half }}) =>
-		shapes.map((shape) => ({
-			...shape,
-			x: getXValue(
-				shape, boardSize, half, distance
-			),
-			y: getYValue(
-				shape, boardSize, half, distance
-			),
-		})),
+		config: { distance }, config }) =>
+		shapes.map((shape) => {
+			const direction = directions[shape.direction];
+
+			return { ...shape,
+				x: getValue(shape.x, config) + (direction.x * distance),
+				y: getValue(shape.y, config) + (direction.y * distance) };
+		}),
 };
 
 export default MovementManager;

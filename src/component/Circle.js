@@ -1,14 +1,8 @@
-/* eslint-disable max-lines-per-function */
-/* eslint-disable no-magic-numbers */
 import React from 'react';
+import WrapObject from './WrapObject';
 
-const Circle = ({ data: { size, x, y, direction }}) => {
-	const directions = {
-		left: { x: 1, y: 0 },
-		right: { x: -1, y: 0 },
-		top: { x: 0, y: -1 },
-		bottom: { x: 0, y: 1 },
-	};
+const Circle = (context) => {
+	const { data: { size, x, y }} = context;
 
 	return <div>
 		<div
@@ -18,17 +12,10 @@ const Circle = ({ data: { size, x, y, direction }}) => {
 				top: `${ y }vmin`,
 				width: `${ size }vmin`,
 				height: `${ size }vmin`,
+				backgroundColor: 'black',
 			} }
 		/>
-		<div
-			className="center circle"
-			style={ {
-				left: `${ x + (directions[direction].x * 100) }vmin`,
-				top: `${ y + (directions[direction].y * 100) }vmin`,
-				width: `${ size }vmin`,
-				height: `${ size }vmin`,
-			} }
-		/></div>;
+		<WrapObject { ...{ ...context, className: 'circle' } }/></div>;
 };
 
 export default Circle;

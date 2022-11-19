@@ -1,13 +1,11 @@
 import { rndBetween, rndValue } from '@laufire/utils/random';
 
-const Fields = ['Square', 'Circle', 'Triangle'];
+const Fields = ['square', 'circle', 'triangle'];
 const Directions = ['right', 'left', 'top', 'bottom'];
 
 const ShapeManager = {
 
-	getRandomMargin: (
-		boardSize, size, half
-	) => {
+	getRandomMargin: (size, { boardSize, half }) => {
 		const limit = size * half;
 		const margin = boardSize - (size * half);
 
@@ -15,7 +13,7 @@ const ShapeManager = {
 	},
 
 	addShape: (context) => {
-		const { config: { min, max, boardSize, half },
+		const { config: { min, max }, config,
 			state: { shapes }} = context;
 		const size = rndBetween(min, max);
 		const maxSquare = 10;
@@ -24,12 +22,8 @@ const ShapeManager = {
 			...maxSquare > shapes.length
 				? [{
 					size: size,
-					x: ShapeManager.getRandomMargin(
-						boardSize, size, half
-					),
-					y: ShapeManager.getRandomMargin(
-						boardSize, size, half
-					),
+					x: ShapeManager.getRandomMargin(size, config),
+					y: ShapeManager.getRandomMargin(size, config),
 					type: rndValue(Fields),
 					direction: rndValue(Directions),
 				}]
