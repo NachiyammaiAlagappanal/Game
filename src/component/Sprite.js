@@ -17,19 +17,19 @@ const components = {
 	triangle: Triangle,
 };
 
-const Shape = ({ type, ...data }) => {
-	const { x, y, direction } = data;
+const Shape = (context) => {
+	const { data: { type, ...rest }} = context;
+	const { x, y, direction } = rest;
 	const Sprite = components[type];
 	const newData = {
-		...data,
+		...rest,
 		x: x + (directions[direction].x * boardSize),
 		y: y + (directions[direction].y * boardSize),
 	};
 
-	console.log(data, newData);
 	return <div>
-		<Sprite { ...data }/>
-		<Sprite { ...newData }/>
+		<Sprite { ...{ ...context, rest } }/>
+		<Sprite { ...{ ...context, rest: newData } }/>
 	</div>;
 };
 

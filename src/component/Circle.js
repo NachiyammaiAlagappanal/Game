@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Circle = ({ size, x, y }) =>
+const Circle = ({ rest: { size, x, y }}) =>
 	<div
 		className="center circle"
 		style={ {

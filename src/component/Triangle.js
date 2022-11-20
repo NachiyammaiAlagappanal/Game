@@ -2,7 +2,7 @@ import React from 'react';
 
 const half = 0.5;
 
-const Triangle = ({ size, x, y }) =>
+const Triangle = ({ rest: { size, x, y }}) =>
 	<div
 		className="center"
 		style={ { borderLeft: `${ size * half }vmin solid transparent`,

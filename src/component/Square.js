@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Square = ({ size, x, y }) =>
+const Square = ({ rest: { size, x, y }}) =>
 	<div
 		className="center"
 		style={ {
