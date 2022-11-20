@@ -1,4 +1,3 @@
-import ColorManager from '../service/ColorManager';
 import MovementManager from '../service/MovementManager';
 import ShapeManager from '../service/ShapeManager';
 
@@ -8,7 +7,7 @@ const addShapes = (context) => ({
 const manageMovement = (context) => ({
 	shapes: MovementManager.movingShapes(context),
 });
-const changeColor = (context) => ({	color: ColorManager.color(context) });
+const changeColor = ({ state }) => ({	color: !state.color });
 
 const actions = {
 	addShapes,

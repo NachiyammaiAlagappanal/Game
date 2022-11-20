@@ -1,4 +1,5 @@
 import { rndBetween, rndValue } from '@laufire/utils/random';
+import ColorManager from './ColorManager';
 
 const Fields = ['square', 'circle', 'triangle'];
 const Directions = ['right', 'left', 'top', 'bottom'];
@@ -26,6 +27,7 @@ const ShapeManager = {
 					y: ShapeManager.getRandomMargin(size, config),
 					type: rndValue(Fields),
 					direction: rndValue(Directions),
+					colorValue: ColorManager.color(context),
 				}]
 				: []];
 	},
