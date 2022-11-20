@@ -7,8 +7,10 @@ const addShapes = (context) => ({
 const manageMovement = (context) => ({
 	shapes: MovementManager.movingShapes(context),
 });
-const changeColor = ({ state }) => ({	color: !state.color });
 
+const changeColor = (context) => ({
+	colors: ShapeManager.changeColor(context),
+});
 const actions = {
 	addShapes,
 	manageMovement,

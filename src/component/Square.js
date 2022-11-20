@@ -1,7 +1,11 @@
 import React from 'react';
 
+const constantColor = (colors, id) =>
+	colors.findLast((color) => color.id === id);
+
 const Square = (context) => {
-	const { rest: { size, x, y, colorValue }, state: { color }} = context;
+	const { rest: { size, x, y, id },
+		state: { colors }} = context;
 
 	return (
 		<div
@@ -9,11 +13,15 @@ const Square = (context) => {
 			style={ {
 				width: `${ size }vmin`,
 				height: `${ size }vmin`,
-				backgroundColor: color ? colorValue : 'black',
+				backgroundColor: constantColor(colors, id)
+					? constantColor(colors, id).color
+					: 'black',
 				left: `${ x }vmin`,
 				top: `${ y }vmin`,
 			} }
-			onClick={ () => context.actions.changeColor(true) }
+			onClick={ () => {
+				context.actions.changeColor({ ...context, data: id });
+			} }
 		/>);
 };
 

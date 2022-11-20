@@ -4,6 +4,7 @@ const upper = 8;
 const ColorManager = {
 	color: () => `#${ Math.random().toString(base)
 		.slice(lower, upper) }`,
+
 };
 
 export default ColorManager;

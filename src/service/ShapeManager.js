@@ -1,8 +1,9 @@
-import { rndBetween, rndValue } from '@laufire/utils/random';
+import { rndBetween, rndString, rndValue } from '@laufire/utils/random';
 import ColorManager from './ColorManager';
 
 const Fields = ['square', 'circle', 'triangle'];
 const Directions = ['right', 'left', 'top', 'bottom'];
+const idLength = 4;
 
 const ShapeManager = {
 
@@ -11,6 +12,14 @@ const ShapeManager = {
 		const margin = boardSize - (size * half);
 
 		return rndBetween(limit, margin);
+	},
+
+	changeColor: (context) => {
+		const { state: { shapes, colors }, data } = context;
+
+		const result = shapes.find((shape) => shape.id === data.data);
+
+		return [...colors, { ...result, color: ColorManager.color() }];
 	},
 
 	addShape: (context) => {
@@ -27,7 +36,7 @@ const ShapeManager = {
 					y: ShapeManager.getRandomMargin(size, config),
 					type: rndValue(Fields),
 					direction: rndValue(Directions),
-					colorValue: ColorManager.color(context),
+					id: rndString(idLength),
 				}]
 				: []];
 	},

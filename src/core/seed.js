@@ -1,6 +1,7 @@
 const seed = {
 	shapes: [],
-	color: false,
+	color: 'black',
+	colors: [],
 };
 
 export default seed;
