@@ -1,5 +1,5 @@
 import React from 'react';
-import Shapes from './Shape';
+import Shapes from './Shapes';
 
 const Board = (context) => {
 	const { config: { boardSize }} = context;

@@ -1,24 +1,15 @@
 import React from 'react';
-import WrapObject from './WrapObject';
 
-const Triangle = (context) => {
-	const { data: { size, x, y }, config: { half }} = context;
+const half = 0.5;
 
-	const style = {
-		borderLeft: `${ size * half }vmin solid transparent`,
-		borderRight: `${ size * half }vmin solid transparent`,
-		borderBottom: `${ size }vmin solid black`,
-	};
-
-	return <div>
-		<div
-			className="center"
-			style={ { ... style,
-				left: `${ x }vmin`,
-				top: `${ y }vmin` } }
-		/>
-		<WrapObject { ...{ ...context, shapeStyle: style } }/>
-	</div>;
-};
+const Triangle = ({ size, x, y }) =>
+	<div
+		className="center"
+		style={ { borderLeft: `${ size * half }vmin solid transparent`,
+			borderRight: `${ size * half }vmin solid transparent`,
+			borderBottom: `${ size }vmin solid black`,
+			left: `${ x }vmin`,
+			top: `${ y }vmin` } }
+	/>;
 
 export default Triangle;
