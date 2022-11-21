@@ -5,7 +5,7 @@ const addShapes = (context) => ({
 	shapes: ShapeManager.addShape(context),
 });
 const manageMovement = (context) => ({
-	shapes: MovementManager.movingShapes(context),
+	shapes: MovementManager.moveShapes(context),
 });
 
 const changeColor = (context) => ({

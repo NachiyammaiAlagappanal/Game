@@ -4,7 +4,7 @@ const constantColor = (colors, id) =>
 	colors.findLast((color) => color.id === id);
 
 const Square = (context) => {
-	const { rest: { size, x, y, id },
+	const { data: { size, x, y, id },
 		state: { colors }} = context;
 
 	return (

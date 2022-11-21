@@ -4,7 +4,7 @@ const constantColor = (colors, id) =>
 	colors.findLast((color) => color.id === id);
 
 const Circle = (context) => {
-	const { rest: { size, x, y, id }, state: { colors }} = context;
+	const { data: { size, x, y, id }, state: { colors }} = context;
 
 	return (
 		<div

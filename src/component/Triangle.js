@@ -4,7 +4,7 @@ const constantColor = (colors, id) =>
 	colors.findLast((color) => color.id === id);
 
 const Triangle = (context) => {
-	const { rest: { size, x, y, id }, config: { half },
+	const { data: { size, x, y, id }, config: { half },
 		state: { colors }} = context;
 
 	return (

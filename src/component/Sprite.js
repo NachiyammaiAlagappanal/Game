@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import React from 'react';
 import Circle from './Circle';
 import Square from './Square';
@@ -11,7 +10,8 @@ const directions = {
 	bottom: { x: 0, y: 1 },
 };
 const boardSize = 100;
-const components = {
+
+const sprites = {
 	circle: Circle,
 	square: Square,
 	triangle: Triangle,
@@ -20,16 +20,16 @@ const components = {
 const Shape = (context) => {
 	const { data: { type, ...rest }} = context;
 	const { x, y, direction } = rest;
-	const Sprite = components[type];
-	const newData = {
+	const Sprite = sprites[type];
+	const doubleData = {
 		...rest,
 		x: x + (directions[direction].x * boardSize),
 		y: y + (directions[direction].y * boardSize),
 	};
 
 	return <div>
-		<Sprite { ...{ ...context, rest } }/>
-		<Sprite { ...{ ...context, rest: newData } }/>
+		<Sprite { ...context }/>
+		<Sprite { ...{ ...context, data: doubleData } }/>
 	</div>;
 };
 
