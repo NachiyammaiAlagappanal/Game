@@ -2,7 +2,7 @@ import { rndBetween, rndString, rndValue } from '@laufire/utils/random';
 import ColorManager from './ColorManager';
 
 const Fields = ['square', 'circle', 'triangle'];
-const Directions = ['left'];
+const Directions = ['left', 'right', 'top', 'bottom'];
 const idLength = 4;
 
 const ShapeManager = {
@@ -26,7 +26,7 @@ const ShapeManager = {
 		const { config: { min, max }, config,
 			state: { shapes }} = context;
 		const size = rndBetween(min, max);
-		const maxSquare = 1;
+		const maxSquare = 10;
 
 		return [...shapes,
 			...maxSquare > shapes.length
