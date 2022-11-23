@@ -5,36 +5,28 @@ const directions = {
 	top: { x: 0, y: 1 },
 	bottom: { x: 0, y: -1 },
 };
-const newValue = (
-	shape, direction, distance, dir
-) => (dir === 'left'
-	? ((shape + (direction * distance)) + 100) % 100
-	: (shape % 100) + (direction * distance));
 
 const getXValue = (
 	shape, boardSize, half, distance
 ) => {
 	const limit = shape.size * half;
-	const margin = boardSize - limit;
-	const dir = directions[shape.direction];
+	const direction = directions[shape.direction];
 
-	return -limit >= shape.x || shape.x <= (margin + limit)
-		? shape.x + (dir.x * distance)
-		: newValue(
-			shape.x, dir.x, distance, dir
-		);
+	return shape.x >= (0 - limit) && shape.x <= (100 + limit)
+		? shape.x + (direction.x * distance)
+		: (shape.x + (direction.x * distance) + 100) % 100;
 };
 
 const getYValue = (
 	shape, boardSize, half, distance
 ) => {
 	const limit = shape.size * half;
-	const margin = boardSize - limit;
 	const direction = directions[shape.direction];
 
-	return limit >= shape.y || shape.y >= margin
-		? (shape.y % 100) + (direction.y * distance)
-		: shape.y + (direction.y * distance);
+	return shape.y >= (0 - limit) || shape.y <= (100 + limit)
+		? shape.y + (direction.y * distance)
+		: (shape.y + (direction.y * distance) + 100) % 100
+	;
 };
 
 const MovementManager = {
