@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React from 'react';
 import Circle from './Circle';
 import Square from './Square';
@@ -27,6 +28,7 @@ const Shape = (context) => {
 		y: y + (directions[direction].y * boardSize),
 	};
 
+	console.log(x);
 	return <div>
 		<Sprite { ...context }/>
 		<Sprite { ...{ ...context, data: doubleData } }/>

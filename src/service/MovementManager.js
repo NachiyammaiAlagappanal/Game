@@ -5,6 +5,11 @@ const directions = {
 	top: { x: 0, y: 1 },
 	bottom: { x: 0, y: -1 },
 };
+const newValue = (
+	shape, direction, distance, limit
+) => (shape <= 0 && -limit >= shape
+	? ((shape + (direction * distance)) + 100) % 100
+	: (shape % 100) + (direction * distance));
 
 const getXValue = (
 	shape, boardSize, half, distance
@@ -14,7 +19,9 @@ const getXValue = (
 	const direction = directions[shape.direction];
 
 	return limit >= shape.x || shape.x >= margin
-		? (shape.x % 100) + (direction.x * distance)
+		? newValue(
+			shape.x, direction.x, distance, limit
+		)
 		: shape.x + (direction.x * distance);
 };
 
