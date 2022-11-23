@@ -7,7 +7,7 @@ const directions = {
 };
 
 const getXValue = (
-	shape, boardSize, half, distance
+	shape, half, distance
 ) => {
 	const limit = shape.size * half;
 	const direction = directions[shape.direction];
@@ -18,7 +18,7 @@ const getXValue = (
 };
 
 const getYValue = (
-	shape, boardSize, half, distance
+	shape, half, distance
 ) => {
 	const limit = shape.size * half;
 	const direction = directions[shape.direction];
@@ -31,14 +31,14 @@ const getYValue = (
 
 const MovementManager = {
 	moveShapes: ({ state: { shapes },
-		config: { distance, boardSize, half }}) =>
+		config: { distance, half }}) =>
 		shapes.map((shape) => ({
 			...shape,
 			x: getXValue(
-				shape, boardSize, half, distance
+				shape, half, distance
 			),
 			y: getYValue(
-				shape, boardSize, half, distance
+				shape, half, distance
 			),
 		})),
 };
