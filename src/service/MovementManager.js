@@ -23,7 +23,7 @@ const getYValue = (
 	const limit = shape.size * half;
 	const direction = directions[shape.direction];
 
-	return shape.y >= (0 - limit) || shape.y <= (100 + limit)
+	return shape.y >= (0 - limit) && shape.y <= (100 + limit)
 		? shape.y + (direction.y * distance)
 		: (shape.y + (direction.y * distance) + 100) % 100
 	;
