@@ -7,6 +7,7 @@ const directions = {
 
 const half = 0.5;
 const boardSize = 100;
+
 const getValue = (
 	shape, distance, axis
 ) => {

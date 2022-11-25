@@ -1,5 +1,5 @@
 import React from 'react';
-import Shape from './Sprite';
+import Shape from './Shape';
 
 const Shapes = (context) => {
 	const { state: { shapes }} = context;

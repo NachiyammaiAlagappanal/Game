@@ -1,5 +1,4 @@
 import { rndBetween, rndString, rndValue } from '@laufire/utils/random';
-import ColorManager from './ColorManager';
 
 const Fields = ['square', 'circle', 'triangle'];
 const Directions = ['left', 'right', 'top', 'bottom'];
@@ -14,11 +13,17 @@ const ShapeManager = {
 		return rndBetween(limit, margin);
 	},
 
+	getRandomColor: ({ hueRange, saturationRange,
+		lightnessRange }) =>
+		`hsl(${ rndBetween(hueRange.min, hueRange.max) },
+	${ rndBetween(saturationRange.min, saturationRange.max) }%,
+	${ rndBetween(lightnessRange.min, lightnessRange.max) }%)`,
+
 	changeColor: (context) => {
-		const { state: { shapes }, data } = context;
+		const { state: { shapes }, data, config } = context;
 
 		return shapes.map((shape) => (shape.id === data.data
-			? { ...shape, color: ColorManager.color() }
+			? { ...shape, color: ShapeManager.getRandomColor(config) }
 			: shape));
 	},
 
