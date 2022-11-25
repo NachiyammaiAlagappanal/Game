@@ -1,11 +1,10 @@
+/* eslint-disable no-console */
 import React from 'react';
 
-const constantColor = (colors, id) =>
-	colors.findLast((color) => color.id === id);
-
 const Square = (context) => {
-	const { data: { size, x, y, id },
-		state: { colors }} = context;
+	const { data: { size, x, y, id, color }} = context;
+
+	console.log(context);
 
 	return (
 		<div
@@ -13,9 +12,7 @@ const Square = (context) => {
 			style={ {
 				width: `${ size }vmin`,
 				height: `${ size }vmin`,
-				backgroundColor: constantColor(colors, id)
-					? constantColor(colors, id).color
-					: 'black',
+				backgroundColor: color,
 				left: `${ x }vmin`,
 				top: `${ y }vmin`,
 			} }

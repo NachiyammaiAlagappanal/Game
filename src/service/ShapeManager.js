@@ -15,11 +15,11 @@ const ShapeManager = {
 	},
 
 	changeColor: (context) => {
-		const { state: { shapes, colors }, data } = context;
+		const { state: { shapes }, data } = context;
 
-		const result = shapes.find((shape) => shape.id === data.data);
-
-		return [...colors, { ...result, color: ColorManager.color() }];
+		return shapes.map((shape) => (shape.id === data.data
+			? { ...shape, color: ColorManager.color() }
+			: shape));
 	},
 
 	addShape: (context) => {
@@ -37,6 +37,7 @@ const ShapeManager = {
 					type: rndValue(Fields),
 					direction: rndValue(Directions),
 					id: rndString(idLength),
+					color: 'black',
 				}]
 				: []];
 	},

@@ -1,4 +1,3 @@
-/* eslint-disable no-magic-numbers */
 const directions = {
 	left: { x: -1, y: 0 },
 	right: { x: 1, y: 0 },
@@ -6,39 +5,29 @@ const directions = {
 	bottom: { x: 0, y: -1 },
 };
 
-const getXValue = (
-	shape, half, distance
+const half = 0.5;
+const boardSize = 100;
+const getValue = (
+	shape, distance, axis
 ) => {
 	const limit = shape.size * half;
 	const direction = directions[shape.direction];
 
-	return shape.x >= (0 - limit) && shape.x <= (100 + limit)
-		? shape.x + (direction.x * distance)
-		: (shape.x + (direction.x * distance) + 100) % 100;
-};
-
-const getYValue = (
-	shape, half, distance
-) => {
-	const limit = shape.size * half;
-	const direction = directions[shape.direction];
-
-	return shape.y >= (0 - limit) && shape.y <= (100 + limit)
-		? shape.y + (direction.y * distance)
-		: (shape.y + (direction.y * distance) + 100) % 100
-	;
+	return shape[axis] >= (0 - limit) && shape[axis] <= (boardSize + limit)
+		? shape[axis] + (direction[axis] * distance)
+		: (shape[axis] + (direction[axis] * distance) + boardSize) % boardSize;
 };
 
 const MovementManager = {
 	moveShapes: ({ state: { shapes },
-		config: { distance, half }}) =>
+		config: { distance }}) =>
 		shapes.map((shape) => ({
 			...shape,
-			x: getXValue(
-				shape, half, distance
+			x: getValue(
+				shape, distance, 'x'
 			),
-			y: getYValue(
-				shape, half, distance
+			y: getValue(
+				shape, distance, 'y'
 			),
 		})),
 };

@@ -1,11 +1,7 @@
 import React from 'react';
 
-const constantColor = (colors, id) =>
-	colors.findLast((color) => color.id === id);
-
 const Triangle = (context) => {
-	const { data: { size, x, y, id }, config: { half },
-		state: { colors }} = context;
+	const { data: { size, x, y, id, color }, config: { half }} = context;
 
 	return (
 		<div
@@ -13,9 +9,7 @@ const Triangle = (context) => {
 			style={ {
 				borderLeft: `${ size * half }vmin solid transparent`,
 				borderRight: `${ size * half }vmin solid transparent`,
-				borderBottom: `${ size }vmin solid ${ constantColor(colors, id)
-					? constantColor(colors, id).color
-					: 'black' }`,
+				borderBottom: `${ size }vmin solid ${ color }`,
 				left: `${ x }vmin`,
 				top: `${ y }vmin`,
 			} }
